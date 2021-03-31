@@ -1,1 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, user-scalable=yes">
+	<title>AC922</title>
+</head>
+	 <style type="text/css">
+		@media screen and (max-width: 630px;) {
+		}
+		
+.bg-img {
+  /* The image used */
+  background-image: url("https://mcusercontent.com/c8b03b2dd47c74a3d1747e72a/images/13148ae8-f0b7-4206-9217-e355f4423257.jpg");
 
+   /*Control the height of the image */
+  min-height:60em;
+  min-width: 70em;
+  display: block;
+
+  /*Center and scale the image nicely */
+  background-position:top;
+  background-repeat: no-repeat;
+  background-size:contain;
+  position:;
+}
+	input[type=name], select {
+  width: 65%;
+  padding: 8px 15px;
+  margin-top:10px;margin-left: 2.6em; margin-bottom: 5%;margin-right: 75%;
+  float: left;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=tel], select {
+  width: 65%;
+  padding: 8px 15px;
+  float: right;
+  margin-top:10px;margin-right:75%; margin-bottom: 5%;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+/*organisation*/
+input[type=text], select {
+  width: 65%;
+  padding: 8px 15px;
+  float: right;
+  margin: 10px 0 0px 0px;margin-right:75%; margin-bottom: 12px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=email], select {
+  width: 65%;
+  padding: 8px 15px;
+  margin-right:75%;margin-top:10px;margin-left: 2.6em; margin-bottom: 5%;
+  float: left;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=enquiry], select {
+  width: 65%;
+  height: 7em;
+  padding: 8px 15px 8px 35px;
+  border-collapse: all;
+  margin: 0px 34px 0px -75px; margin-top:10px;margin-left: 2.6em; margin-bottom: 3%;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=submit] {
+  width: 50%;
+  background-color: #005ce6;
+  font-size: 15px;
+  font-style: inherit;
+  color: white;
+  padding: 8px 15px;
+  margin: 12px 0px 0px 25px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #66a3ff;
+}
+input[type=reset] {
+  width: 50%;
+  background-color: #1a75ff;
+  font-size: 15px;
+  font-style: inherit;
+  color: white;
+  padding: 8px 15px;
+  margin: 12px 0px 0px 20px; margin-left: 2.2em;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer; display: flex;
+  float: left;
+}
+input[type=reset]:hover {
+  background-color: #66a3ff;
+}
+
+div {
+  border-radius: 0px;
+  background-color: white;
+  padding:0px;
+  font-family: Arial, Helvetica, sans-serif;font-weight:300;font-size: 92.5%;
+}
+.row{
+  display: flex;                  /* establish flex container */
+  flex-direction: row;            /* default value; can be omitted */
+  flex-wrap:nowrap;              /* default value; can be omitted */ /* switched from default (flex-start, see below) */
+  align-items: left;
+  max-width: 95%;
+}
+</style>
+<body style="align-items: center;width: 95%; height: auto; margin:auto;">
+	<div class="bg-img">
+	<!--Form-->
+		<form action="newconnect.php" method="post" style="padding-top: 28%; padding-left: 5.2%;">
+  <div style="width: 62%;height: 58%;padding-left:3.2em;">
+  <!-- Name-->
+  <div class="row">
+  <div class="col-md-6 col-sm-6" style="width: 50%;">
+  <label for="fname" style="padding-left:0em;float: left;">Name:</label><br>
+    <input style="margin-left:0em;" width="30" type="name" name="fname" id="fname" placeholder="Name" required> </div>
+  <!-- Mobile Number -->  
+    <div class="col-sm-6" style="width: 50%;">
+      <label for="tel" style="float:left; margin-left: -27.5%;">Mobile Number:</label><br>
+    <input style="margin-left:-28%;float: left;" type="tel" name="tel" id="tel" placeholder="Contact Number" required></div></div>
+   <!-- E-Mail & Organisation -->
+   <div class="row">
+   <div class="col-md-6 col-sm-6" style="float:left; padding-top: 0px; width: 50%;">
+  <label for="email" style="padding-left:0em; float: left; width: 25%; font-size: 90%;font-stretch: expanded;"> Email Address:</label><br>
+    <input style="margin-left:0em;" type="email" name="email" id="email" placeholder="eg. john@xyz.com" required></div>
+  <!-- Organisation -->
+    <div class="col-md-6 col-sm-6" style="width: 50%;">
+  <label for="name" style="margin-left:-27.5%;float: left;">Organization:</label> <br>
+    <input style="float:left; margin-left: -28%;"  type="text" name="OrganizationName" id="OrganizationName" placeholder="eg. Abc Pvt. Ltd " required><br><br></div></div>
+    <!-- Enquiry -->
+    <div>
+  	<label for="text" style="padding-left:0em;padding-top: 0em;float:left;font-family: Arial, Helvetica, sans-serif;font-weight:300;font-size: 92.5%;">Enquiry:</label><br>
+    <input style="margin-left:0em;" type="Enquiry" name="Enquiry" id="Enquiry" placeholder="Send us an Enquiry"><br></div>
+    <!-- Submit & Reset -->
+    <div class="row">
+  <div style="margin-left: 0px; float: left; display: flex;" align="left">
+<input type="submit"><input type="reset" name="" style="float: right;">
+ </div></div>
+</div></form></div>
+</body>
+</html>
