@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Resume Filter</title>
+</head>
+<style>
+  input[type=Name], select {
+  width: 250px;
+  padding: 8px 15px;
+  margin: 10% 0px 10px 10px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=Date], select {
+  width: 250px;
+  padding: 8px 15px;
+  float: center;
+  margin: 8px 10px 10px 10px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=text], select {
+  width: 250px;
+  padding: 8px 15px;
+  float: left;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=email], select {
+  width: 250px;
+  padding: 8px 15px;
+  margin: 8px 0;
+  float: center;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=submit] {
+  width: 150px;
+  background-color: #4CAF50;
+  font-size: 18px;
+  font-style: inherit;
+  color: white;
+  padding: 8px 15px;
+  margin: 5% 0px 11px 25%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 0px;
+  background-color: white;
+  padding:0px;
+}
+</style>
+<body>
+<div style="width: 650px ;height:300px;margin-left:23%;padding-top:5%" align="center">
+    <div>
+      <input type="radio" onclick="window.location.href='file:///D:/Achor%20Platform/Resume%20Filter-%20Single%20Search.html';" style="margin-left: 8%" id="single" name="select"  value="single" checked>
+      <label for="single">Single Search</label>
+    <input type="radio" onclick="window.location.href='file:///D:/Achor%20Platform/Resume%20Filter-%20Multiple%20Search.html';" style="margin-left: 15%" id="multiple" name="select" value="multiple">
+      <label for="multiple">Multiple Search</label></div>
+
+  <form action="https://prod-21.centralindia.logic.azure.com:443/workflows/1a696f375ade41d380c844f19341d236/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=mgP8dN4m6eodhzRcJgEi_i2eux0a1hXhJlrjsZQh9GU" method="POST">
+<!--Radio Button-->
+
+    <!-- Name -->
+  <div><label for="JobId/Name" style="padding-left: 50px;float: center;">Job Id/Name:</label>
+    <input style="margin-left: 50px" type="name" name="JobId/Name" id="JobId/Name" placeholder="Job Id/Name" required><br>
+  </div>
+<!-- Date-->
+    <div><label for="date" style="margin-left:17.2%;float: center;">Date:</label>
+      <input style="margin-left:50px" type="date" name="date" id="date" placeholder="yyyy/mm/dd" value="yyyy/mm/dd" required>
+    </div>
+<!-- E-mail-->
+  <div><label for="email" style="padding-left: 68px; float: center;">E-Mail Id.:</label>
+    <input style="margin-left: 50px" type="email" name="email" id="email" placeholder="eg. john@xyz.com" >
+  </div>
+<!-- Submit-->
+<input type="submit">
+<!--Address-->
+ </form></div></body></html>
