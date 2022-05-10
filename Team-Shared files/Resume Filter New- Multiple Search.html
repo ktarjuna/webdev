@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Resume Filter</title>
+  <script src="https://unpkg.com/read-excel-file@4.x/bundle/read-excel-file.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.14.5/xlsx.full.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<style>
+  input[type=Name], select {
+  width: 250px;
+  padding: 8px 15px;
+  margin: 10% 0px 10px 10px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=Date], select {
+  width: 250px;
+  padding: 8px 15px;
+  float: center;
+  margin: 8px 10px 10px 10px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=submit] {
+  width: 150px;
+  background-color: #4CAF50;
+  font-size: 18px;
+  font-style: inherit;
+  color: white;
+  padding: 8px 15px;
+  margin: 6% 0px 10% 5%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+input[type=url] {
+  width: 30%;
+  height:50%;
+/* <!--  background-color: #45a049;--> */
+  font-size: 90%;
+  font-style: inherit;
+/* <!--  color: silver-dark;--> */
+  padding: 15px 20px;
+  margin: 5% 10px 6% 2%;
+  border: line;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=file]:hover {
+  background-color: #aadb9c;
+}
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 0px;
+  background-color: white;
+  padding:0px;
+}
+</style>
+<body>
+<div style="width: 650px ;height:300px;margin-left:23%;padding-top:5%" align="center">
+  <!--Radio Buttons-->
+    <div>
+      <input type="radio" onclick="window.location.href='file:///D:/Achor%20Platform/Resume%20Filter-%20Single%20Search.html';"
+             style="margin-left: 8%" id="single" name="select"  value="single">
+      <label for="single">Single Search</label>
+    <input type="radio" onclick="window.location.href='file:///D:/Achor%20Platform/Resume%20Filter%20New-%20Multiple%20Search.html';"
+           style="margin-left: 12%" id="multiple" name="select" value="multiple" checked>
+      <label for="multiple">Multiple Search</label></div><br>
+  <form action="https://prod-12.centralindia.logic.azure.com:443/workflows/e74c1e338f004e95bd2af4241b5053f1/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=OjZX9wc-FJei1rBidHUv0p-OCGZFt958SzN5hHIk6ig" method="POST">
+    
+<!--     Name-->
+  <div style="margin-top: 5%; float: center;"><label for="JobId/Name" style="padding-left: 50px;float: center;">Upload Your file here:</label>
+    <input style="margin-left: 40px" type="file" name="input" id="input" accept=".xls,.xlsx" placeholder="eg: resumefilter.xlsx" required><br>
+  </div><br><br>
+
+  <a href="https://d33wubrfki0l68.cloudfront.net/966b32db-baf5-41b4-8ac3-4b6d79e9655b/Template%20file.xlsx"
+  target="_blank"  style="padding-left:10% margin-top=15% margin-left=5%"  download>
+ Click here to Download/View the template
+</a> <br> 
+<!-- Input Values -->
+<div>
+  <input type="text" name="file" id="demo" hidden><br>
+  <input type="text" name="file" id="live" hidden>
+  <table id="tbl-data" style="margin: 5%; font-display: scroll;"></table>
+      <p><span id="tbl-data"></span> </p>
+
+</div>
+
+<script src="parseexcel.js"></script>
+<input type="submit">
+<!--Address-->
+ </form></div></body></html>
